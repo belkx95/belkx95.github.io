@@ -1,0 +1,11 @@
+<div *ngIf="news">
+
+    <div>
+      <label for="news-title">News title: </label>
+      <p id="news-title">{{news.title}} {{news.$key}}</p>
+    </div>
+  
+</div>
+<button type="button" (click)="goBack()">Back</button>
+<a routerLink="/edit/{{id}}"><button type="button">Edit</button></a>
+<button type="button" (click)="deleteNews(id)">Delete</button>

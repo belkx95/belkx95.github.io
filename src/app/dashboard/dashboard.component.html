@@ -1,0 +1,7 @@
+<h2>Top News</h2>
+<div class="news-menu">
+  <a *ngFor="let news of newsList| slice:0:4;"
+    routerLink="/detail/{{news.$key}}">
+    {{news.title}}
+  </a>
+</div>

@@ -1,0 +1,14 @@
+<div class="no-data text-center" *ngIf="noData">
+  <p class="nodata-msg">No news added yet!</p>
+</div>
+<ul class="newslist">
+  <li *ngFor="let news of newsList | paginate: { itemsPerPage: 8, currentPage: p };
+  let i = index">
+    <a routerLink="/detail/{{news.$key}}">
+      <span class="badge"></span>
+      <span class="title">{{news.title}}</span>
+    </a>
+  </li>
+</ul>
+<a routerLink="/add"><button type="button">Add News</button></a>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
