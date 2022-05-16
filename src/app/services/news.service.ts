@@ -18,19 +18,6 @@ export class NewsService {
 
   constructor(private db: AngularFireDatabase) { }
 
-  // getNewsList(): Observable<News[]> {
-  //   const newsList = of(NEWSLIST);
-  //   return newsList;
-  // }
-  
-  // getNews(id: number): Observable<News> {
-  //   // For now, assume that a hero with the specified `id` always exists.
-  //   // Error handling will be added in the next step of the tutorial.
-  //   const news = NEWSLIST.find(h => h.id === id)!;
-  //   return of(news);
-  // }
-
-
   // Create News
   addNews(news: News) {
     this.newsListRef.push({
